@@ -120,7 +120,7 @@ class KMeans(object):
         self.converged=False
         allx = numpy.arange(N)
         prevdist = 0
-        for jiter in xrange( 1, maxiter+1 ):
+        for jiter in range( 1, maxiter+1 ):
 
             D = cdist_radec(X, centers)  # npoints x ncenters
 
@@ -347,7 +347,7 @@ def random_sample( X, n ):
     """
     random.sample of the rows of X
     """
-    sampleix = random.sample( xrange( X.shape[0] ), int(n) )
+    sampleix = random.sample( range( X.shape[0] ), int(n) )
     return X[sampleix]
 
 def find_nearest( X, centers):
